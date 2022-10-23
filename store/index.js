@@ -25,15 +25,13 @@ const cartSlice = createSlice({
         addItem(state, item){
             state.push(item.payload)
         },
-        updateQuantity(state, id, quantity){
+        updateQuantity(state, params){
             state.forEach(item => {
-                console.log("inStore",quantity)
-                if(item.id === id.payload){
-                  return  item.quantity = quantity
+                if(item.id === params.payload.id){
+                    item.quantity = params.payload.quantity
                 }
-            })
+            })   
         }
-        
     }
 })
 

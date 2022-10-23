@@ -1,38 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CartItem from "./CartItem";
-import { useSelector, useDispatch } from 'react-redux'
-// import { cartItems } from "../data/cartItems";
-import { cartActions } from "./../store/index";
+import { useSelector } from 'react-redux'
 
 const CartModal = (props) => {
 
+    const [total, setTotal] = useState(0);
     const cart = useSelector(state => state)
-    const dispatch = useDispatch()
-//   const [cartData, setCartData] = useState(cartItems)
-  const getTotal = () => {
-    let newTotal = 0;
-    cart.forEach(item => {
-      newTotal += (item.price * item.quantity)
-    })
-   return newTotal
-  }
 
-  const [total, setTotal] = useState(getTotal);
-  
-  const addNew = () => {
-    const item = {
-        title: props.title,
-        link: props.link,
-        quantity: 1,
-        price: props.price,
-        id: Math.random()
-    }
-    dispatch(cartActions.addItem(item))
-    console.log(cart)
-  }
+    useEffect(() => {
+        let newTotal = 0;
+        cart.forEach(item => {
+            newTotal += item.price * item.quantity
+        })
+        setTotal(newTotal)
+    }), [cart]
+    
 
-  
   if (!props.open) return null;
 
   return (
@@ -48,7 +32,7 @@ const CartModal = (props) => {
             width={40}
           />
         </div>
-        {cart.map(item =>
+        {cart.length < 1 ? <h1 className=" m-auto text-2xl text-slate-400">Cart Empty...</h1> : cart.map(item =>
           <CartItem
           setTotal={setTotal}
           key={item.id}
@@ -58,9 +42,9 @@ const CartModal = (props) => {
           quantity={item.quantity}
           />
         )}
-      <div className="text-black absolute bottom-0">
-        <p>Total: ${total}</p>
-        <button onClick={addNew}>Checkout</button>
+      <div className="text-black mt-auto bottom-0">
+        <p>Total: ${Math.round(total * 100)/100}</p>
+        <button className=" active:scale-95 bg-cyan-400 p-2 pr-5 pl-5 rounded-lg shadow-md shadow-slate-400 hover:bg-cyan-500">Checkout</button>
       </div>
       </div>
     </>

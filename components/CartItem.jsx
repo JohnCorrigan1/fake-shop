@@ -8,18 +8,24 @@ const CartItem = (props) => {
 
     const dispatch = useDispatch();
     const cart = useSelector(state => state)
+
+    const getTotal = () => {
+        let newTotal = 0; 
+        cart.forEach(item => {
+            newTotal += item.quantity * item.price
+         })
+         props.setTotal(newTotal)
+    }
     
   const removeHandler = () => {
     dispatch(cartActions.removeItem(props.id))
   }
 
   const quantityHandler = (e) => {
-    console.log(typeof(e.target.value))
-    dispatch(cartActions.updateQuantity(props.id, e.target.value))
-    console.log("quant", e.target.value)
+    let params = {quantity: e.target.value, id: props.id}
+    dispatch(cartActions.updateQuantity(params))
     setQuantity(e.target.value)
-    console.log(cart)
-    };
+};
 
   return (
     <div className="mt-5 flex items-center border-2 gap-5 w-full justify-between p-5">
@@ -73,7 +79,7 @@ const CartItem = (props) => {
       <div className="flex flex-col justify-center items-center gap-10">
         <button
           onClick={removeHandler}
-          className=" hover:bg-rose-600 text-lg rounded-lg bg-rose-500 w-fit p-2 shadow-md shadow-slate-500"
+          className="active:scale-95 hover:bg-rose-600 text-lg rounded-lg bg-rose-500 w-fit p-2 shadow-md shadow-slate-500"
         >
           Remove
         </button>
