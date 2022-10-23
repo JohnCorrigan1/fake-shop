@@ -7,18 +7,41 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-/* .items-container{
-    display: grid;
-    grid-template-columns: repeat(minmax(200px, 300px));
-} */
-
-.cart{
+.cart-in{
     -webkit-animation: slideIn 1s;
     -moz-animation: slideIn 1s;
     animation: slideIn 1s; 
-    /* -webkit-animation: slideOut 1s;
-    -moz-animation: slideOut 1s;
-    animation: slideOut 1s;  */
+}
+
+.cart-out{
+  -webkit-animation: slideOut 1s;
+  -moz-animation: slideOut 1s;
+    animation: slideOut 1s; 
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+@-moz-keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(900px);
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(900px);
+  }
 }
 
 @-webkit-keyframes slideIn {
