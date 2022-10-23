@@ -1,31 +1,31 @@
 import Image from "next/image";
 import { useState } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../store/index";
 
 const CartItem = (props) => {
   const [quantity, setQuantity] = useState(props.quantity);
 
-    const dispatch = useDispatch();
-    const cart = useSelector(state => state)
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state);
 
-    const getTotal = () => {
-        let newTotal = 0; 
-        cart.forEach(item => {
-            newTotal += item.quantity * item.price
-         })
-         props.setTotal(newTotal)
-    }
-    
+  const getTotal = () => {
+    let newTotal = 0;
+    cart.forEach((item) => {
+      newTotal += item.quantity * item.price;
+    });
+    props.setTotal(newTotal);
+  };
+
   const removeHandler = () => {
-    dispatch(cartActions.removeItem(props.id))
-  }
+    dispatch(cartActions.removeItem(props.id));
+  };
 
   const quantityHandler = (e) => {
-    let params = {quantity: e.target.value, id: props.id}
-    dispatch(cartActions.updateQuantity(params))
-    setQuantity(e.target.value)
-};
+    let params = { quantity: e.target.value, id: props.id };
+    dispatch(cartActions.updateQuantity(params));
+    setQuantity(e.target.value);
+  };
 
   return (
     <div className="mt-5 flex items-center border-2 gap-5 w-full justify-between p-5">
