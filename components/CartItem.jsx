@@ -11,16 +11,15 @@ const CartItem = (props) => {
     
   const removeHandler = () => {
     dispatch(cartActions.removeItem(props.id))
-    };
+  }
 
   const quantityHandler = (e) => {
-    cart.forEach((element) => {
-      if (element.id === props.id) {
-        element.quantity = e.target.value;
-      }
-      setQuantity(e.target.value);
-    });
-  };
+    console.log(typeof(e.target.value))
+    dispatch(cartActions.updateQuantity(props.id, e.target.value))
+    console.log("quant", e.target.value)
+    setQuantity(e.target.value)
+    console.log(cart)
+    };
 
   return (
     <div className="mt-5 flex items-center border-2 gap-5 w-full justify-between p-5">

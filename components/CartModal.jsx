@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import Image from "next/image";
 import CartItem from "./CartItem";
+import { useSelector, useDispatch } from 'react-redux'
 // import { cartItems } from "../data/cartItems";
 import { cartActions } from "./../store/index";
 
 const CartModal = (props) => {
 
     const cart = useSelector(state => state)
-
+    const dispatch = useDispatch()
 //   const [cartData, setCartData] = useState(cartItems)
   const getTotal = () => {
     let newTotal = 0;
@@ -17,7 +17,20 @@ const CartModal = (props) => {
     })
    return newTotal
   }
+
   const [total, setTotal] = useState(getTotal);
+  
+  const addNew = () => {
+    const item = {
+        title: props.title,
+        link: props.link,
+        quantity: 1,
+        price: props.price,
+        id: Math.random()
+    }
+    dispatch(cartActions.addItem(item))
+    console.log(cart)
+  }
 
   
   if (!props.open) return null;
@@ -47,7 +60,7 @@ const CartModal = (props) => {
         )}
       <div className="text-black absolute bottom-0">
         <p>Total: ${total}</p>
-        <button>Checkout</button>
+        <button onClick={addNew}>Checkout</button>
       </div>
       </div>
     </>

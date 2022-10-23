@@ -18,13 +18,20 @@ const cartSlice = createSlice({
     initialState: initialState,
     reducers: {
         removeItem(state, id) {
-            state.filter((element) => {
-                return element.id !== id.payload
-            })
+            console.log(id)
+            return state.filter(element => element.id !== id.payload)
            
         },
         addItem(state, item){
             state.push(item.payload)
+        },
+        updateQuantity(state, id, quantity){
+            state.forEach(item => {
+                console.log("inStore",quantity)
+                if(item.id === id.payload){
+                  return  item.quantity = quantity
+                }
+            })
         }
         
     }
