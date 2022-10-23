@@ -9,7 +9,7 @@ const CategoryCard = (props) => {
             <Image src={props.img} height={250} width={250}/>
             </div>
             <div className="h-24 flex justify-center items-center">
-                <Link href={props.link}><button className="p-2 font-bold shadow-sm shadow-black bg-slate-300 hover:bg-slate-400 rounded-xl pr-4 pl-4 active:scale-95">{props.btnText}</button></Link>
+                <Link href={props.link ?? ''}><button className="p-2 font-bold shadow-sm shadow-black bg-slate-300 hover:bg-slate-400 rounded-xl pr-4 pl-4 active:scale-95">{props.btnText}</button></Link>
             </div>
             </div>
         </div>
