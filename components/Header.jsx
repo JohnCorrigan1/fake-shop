@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import CartModal from "./CartModal";
 import Link from "next/link";
 

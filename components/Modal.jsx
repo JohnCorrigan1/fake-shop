@@ -1,40 +1,38 @@
 import Image from "next/image";
 import { useState } from "react";
-import { cartItems } from "./../data/cartItems";
-import { useSelector, useDispatch } from 'react-redux';
-import { cartActions } from '../store/index'
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "../store/index";
 
 const Modal = (props) => {
   const [quantity, setQuantity] = useState(1);
 
-    const dispatch = useDispatch();
-    const cart = useSelector(state => state)
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state);
 
-    const addItemHandler = () => {
-        const item = {
-            title: props.title,
-            link: props.link,
-            quantity: quantity,
-            price: props.price,
-            id: Math.random()
-        }
-        dispatch(cartActions.addItem(item))
-        console.log(cart)
-        props.onClose();
-    }
+  const addItemHandler = () => {
+    const item = {
+      title: props.title,
+      link: props.link,
+      quantity: quantity,
+      price: props.price,
+      id: Math.random(),
+    };
+    dispatch(cartActions.addItem(item));
+    console.log(cart);
+    props.onClose();
+  };
 
-
-//   const addItemHandler = () => {
-//     cartItems.push({
-//       title: props.title,
-//       link: props.link,
-//       quantity: quantity,
-//       price: props.price,
-//       id: Math.random()
-//     });
-//     console.log(cartItems);
-//     props.onClose();
-//   };
+  //   const addItemHandler = () => {
+  //     cartItems.push({
+  //       title: props.title,
+  //       link: props.link,
+  //       quantity: quantity,
+  //       price: props.price,
+  //       id: Math.random()
+  //     });
+  //     console.log(cartItems);
+  //     props.onClose();
+  //   };
 
   if (!props.open) return null;
 
@@ -45,7 +43,7 @@ const Modal = (props) => {
         <h1 className="text-2xl font-bold">{props.title}</h1>
         <div className="flex flex-col items-center">
           <Image src={props.link} height={200} width={200} />
-          
+
           <p>Total: ${props.price}</p>
         </div>
 

@@ -6,7 +6,7 @@ const CategoryCard = (props) => {
     <div className="items-center flex justify-between mr-auto ml-auto mt-10">
       <div className="rounded-lg bg-slate-100 shadow-lg">
         <div className="flex justify-center shadow-md p-5 rounded-xl">
-          <Image src={props.img} height={250} width={250} />
+          <Image src={props.img} height={250} width={250} alt={props.title}/>
         </div>
         <div className="h-24 flex justify-center items-center">
           <Link href={props.link ?? ""}>
