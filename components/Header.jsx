@@ -21,9 +21,9 @@ const Header = () => {
   return (
     <div className="bg-slate-600 text-violet-100 shadow-md shadow-black">
       <CartModal onClose={closeHanlder} active={active} open={open} link="/shoe1.png" />
-      <nav className="flex justify-between mr-10 ml-10 p-5 items-center ">
+      <nav className="navbar flex justify-between mr-10 ml-10 p-5 items-center ">
         <Link href="/">
-          <h1 className="font-bold text-2xl hover:-translate-y-1 duration-300 cursor-pointer">
+          <h1 className="title font-bold text-2xl hover:-translate-y-1 duration-300 cursor-pointer">
             Fake Store
           </h1>
         </Link>

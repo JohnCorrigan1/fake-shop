@@ -38,8 +38,8 @@ const Modal = (props) => {
 
   return (
     <>
-      <div className="modal bg-black bg-opacity-70 fixed top-0 right-0 bottom-0 left-0 z-50"></div>
-      <div className="bg-white flex flex-col gap-10 items-center p-12 rounded-xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-lg z-50">
+      <div className="bg-black bg-opacity-70 fixed top-0 right-0 bottom-0 left-0 z-50"></div>
+      <div className=" bg-white flex flex-col gap-10 items-center p-12 rounded-xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-lg z-50">
         <h1 className="text-2xl font-bold">{props.title}</h1>
         <div className="flex flex-col items-center">
           <Image src={props.link} height={200} width={200} />

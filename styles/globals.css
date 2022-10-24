@@ -19,6 +19,35 @@ body{
     animation: slideOut 1s; 
 }
 
+@media(max-width: 800px) {
+  .about{
+    flex-direction: column;
+  }
+
+  .about-text{
+    font-size: 36px;
+  }
+  
+  .about-image{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .navbar{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .title{
+    font-size: 24px;
+  }
+
+  .modal{
+    width: 100vw;
+  }
+
+}
+
 @-webkit-keyframes slideOut {
   0% {
     transform: translateX(0);
