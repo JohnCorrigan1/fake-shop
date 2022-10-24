@@ -15,7 +15,7 @@ const About = () => {
           <TextAnimation text="Fake" />
         </div>
       </div>
-      <div className="about-image -mr-10 shadow-lg shadow-slate-800 p-3 rounded-xl bg-slate-600 justify-center w-2/3">
+      <div className="about-image -mr-10 shadow-lg shadow-slate-800 p-3 rounded-xl bg-slate-600 justify-center max-w-2/3 mr-10">
         <Image className="" src="/fashionIcon.png" width={500} height={500} alt="ai generated model"/>
       </div>
     </div>

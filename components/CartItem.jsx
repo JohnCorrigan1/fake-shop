@@ -28,10 +28,10 @@ const CartItem = (props) => {
   };
 
   return (
-    <div className="mt-5 flex items-center border-2 gap-5 w-full justify-between p-5">
-      <Image src={props.link} height={150} width={150} alt={props.title}/>
+    <div className="cart-item mt-5 flex items-center border-2 gap-5 w-full justify-between p-5">
+      <Image src={props.link} height={150} width={150} alt={props.title} />
       <div className="flex-col text-black">
-        <h1 className="text-xl font-bold">Dalle Runners</h1>
+        <h1 className="cart-title text-xl font-bold">Dalle Runners</h1>
         <div className="">
           <p className="font-bold">
             Quantity:{" "}

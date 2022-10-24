@@ -21,7 +21,7 @@ const CartModal = (props) => {
   return (
     <>
       <div className=" bg-black bg-opacity-70 fixed top-0 right-0 bottom-0 left-0 z-50"></div>
-      <div className={`${props.active ? 'cart-in' : 'cart-out'} overflow-y-scroll bg-white flex flex-col gap-10 items-center p-12 rounded-xl fixed right-0 w-5/6 max-w-2xl h-5/6 mt-20 z-50`}>
+      <div className={`${props.active ? 'cart-in' : 'cart-out'} cart-modal overflow-y-scroll bg-white flex flex-col gap-10 items-center p-12 rounded-xl fixed right-0 w-5/6 max-w-2xl h-5/6 mt-20 z-50`}>
         <div className="absolute top-5 left-5 ">
           <Image
             onClick={props.onClose}

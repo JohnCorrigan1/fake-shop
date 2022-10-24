@@ -46,6 +46,18 @@ body{
     width: 100vw;
   }
 
+  .cart-modal{
+    min-width: 100vw;
+    padding: 10px;
+    padding-top: 40px;
+  }
+
+}
+
+@media (max-width: 400px){
+ .cart-title{
+  font-size: large;
+ }
 }
 
 @-webkit-keyframes slideOut {
