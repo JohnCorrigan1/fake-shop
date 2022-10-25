@@ -2,7 +2,7 @@ import FaqItem from "./ FaqItem";
 
 const Faq = () => {
   return (
-      <div className="faq rounded-xl flex gap-5 flex-col shadow-slate-600 shadow-lg mr-auto ml-auto mt-10 bg-sky-600 w-2/3 p-5 text-zinc-200">
+      <div className="faq rounded-xl flex gap-5 flex-col shadow-slate-600 shadow-lg mr-auto ml-auto mt-10 bg-sky-600 w-2/3 max-w-3xl p-5 text-zinc-200">
         <FaqItem
           question={"Are all these images really made by AI?"}
           answer={

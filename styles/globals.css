@@ -2,78 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.cart-in{
-    -webkit-animation: slideIn 1s;
-    -moz-animation: slideIn 1s;
-    animation: slideIn 1s; 
+.cart-in {
+  -webkit-animation: slideIn 1s;
+  -moz-animation: slideIn 1s;
+  animation: slideIn 1s;
 }
 
-.cart-out{
+.cart-out {
   -webkit-animation: slideOut 1s;
   -moz-animation: slideOut 1s;
-    animation: slideOut 1s; 
+  animation: slideOut 1s;
 }
 
-@media(max-width: 800px) {
-  .about{
+@media (max-width: 800px) {
+  .about {
     flex-direction: column;
   }
 
-  .about-text{
+  .about-text {
     font-size: 36px;
   }
-  
-  .about-image{
+
+  .about-image {
     margin-right: auto;
     margin-left: auto;
   }
 
-  .navbar{
+  .navbar {
     margin-right: 10px;
     margin-left: 10px;
   }
 
-  .title{
+  .title {
     font-size: 24px;
   }
 
-  .modal{
+  .modal {
     width: 100vw;
   }
 
-  .cart-modal{
+  .cart-modal {
     min-width: 100vw;
     padding: 10px;
     padding-top: 40px;
   }
 
+  .info-container{
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 400px){
- .cart-title{
-  font-size: large;
- }
- .remove-button{
-  font-size: medium;
-  padding: 2px;
- }
+@media (max-width: 400px) {
+  .cart-title {
+    font-size: large;
+  }
+  .remove-button {
+    font-size: medium;
+    padding: 2px;
+  }
 
- .faq{
-  min-width: 85vw;
- }
+  .faq {
+    min-width: 85vw;
+  }
 
- .faq-q{
-  font-size: 18px;
- }
+  .faq-q {
+    font-size: 18px;
+  }
 
- .faq-a{
-  font-size:14px
- }
+  .faq-a {
+    font-size: 14px;
+  }
 }
 
 @-webkit-keyframes slideOut {
@@ -102,26 +104,26 @@ body{
 }
 
 @-webkit-keyframes slideIn {
-    0% {
-      transform: translateX(200%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(200%);
   }
-  @-moz-keyframes slideIn {
-    0% {
-      transform: translateX(900px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
-  @keyframes slideIn {
-    0% {
-      transform: translateX(900px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(900px);
   }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

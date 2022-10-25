@@ -3,7 +3,7 @@ import Header from "../../../components/Header";
 import ItemCard from "../../../components/ItemCard";
 import Head from "next/head";
 
-export default function Shoes() {
+export default function Shirts() {
   return (
     <>
       <Head>
@@ -21,18 +21,13 @@ export default function Shoes() {
       <style jsx>{`.items-container{
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));`}</style>
       <div className="grid gap-10 items-container p-10 w-full justify-center">
-        <ItemCard title="Dalle Runners" price={54.99} link="/shoe1.png" />
-        <ItemCard title="Classic Skate" price={44.99} link="/shoe2.png" />
-        <ItemCard
-          title="Classic Skate Limited Edition"
-          price={49.99}
-          link="/shoe3.png"
-        />
-        <ItemCard title="All white" price={64.99} link="/allwhites.png" />
-        <ItemCard title="Red Carpet" price={69.99} link="/redCarpet.png" />
-        <ItemCard title="All Black High Tops" price={74.99} link="/allBlackHigh.png" />
-        <ItemCard title="All Black Low Tops" price={64.99} link="/allBlackLow.png" />
-        <ItemCard title="Badazzled" price={89.99} link="/badazzled.png" />
+        <ItemCard price={24.99} title="Sun Wars" link="/shirts.png" />
+        <ItemCard title="Sun Dial" price={19.99} link="/sunDial.png" />
+        <ItemCard title="The 2 Way" price={19.99} link="/2way.png" />
+        <ItemCard title="Baige" price={17.99} link="/plainBaige.png" />
+        <ItemCard title="Black" price={17.99} link="/plainBlack.png" />
+        <ItemCard title="White Collar" price={29.99} link="/collar.png" />
+        <ItemCard title="Black Collar" price={29.99} link="/blackCollar.png" />
       </div>
     </>
   );
