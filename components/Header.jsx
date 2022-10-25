@@ -39,7 +39,7 @@ const Header = () => {
           >
             Cart
           </li>
-          <Link href="/Contact">
+          <Link href="/contact">
             <li className="text-lg font-semibold hover:-translate-y-1 cursor-pointer hover:underline duration-300">
               Contact
             </li>

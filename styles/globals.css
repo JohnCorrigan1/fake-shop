@@ -58,6 +58,22 @@ body{
  .cart-title{
   font-size: large;
  }
+ .remove-button{
+  font-size: medium;
+  padding: 2px;
+ }
+
+ .faq{
+  min-width: 85vw;
+ }
+
+ .faq-q{
+  font-size: 18px;
+ }
+
+ .faq-a{
+  font-size:14px
+ }
 }
 
 @-webkit-keyframes slideOut {

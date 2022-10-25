@@ -79,7 +79,7 @@ const CartItem = (props) => {
       <div className="flex flex-col justify-center items-center gap-10">
         <button
           onClick={removeHandler}
-          className="active:scale-95 hover:bg-rose-600 text-lg rounded-lg bg-rose-500 w-fit p-2 shadow-md shadow-slate-500"
+          className="remove-btn active:scale-95 hover:bg-rose-600 text-lg rounded-lg bg-rose-500 w-fit p-2 shadow-md shadow-slate-500"
         >
           Remove
         </button>
