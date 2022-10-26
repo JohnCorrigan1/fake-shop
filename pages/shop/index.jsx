@@ -23,7 +23,6 @@ const Shop = () => {
         <CategoryCard img="/shoes.png" link="/shop/shoes" btnText="Shoes" />
         <CategoryCard img="/shorts.png" link="/shop/shorts" btnText="Shorts" />
         <CategoryCard img="/shirts.png" link="/shop/shirts" btnText="Shirts" />
-        <CategoryCard img="/all.png" link="/shop/all" btnText="View All" />
       </div>
     </>
   );

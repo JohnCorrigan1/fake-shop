@@ -3,7 +3,7 @@ import Header from "../../../components/Header";
 import ItemCard from "../../../components/ItemCard";
 import Head from "next/head";
 
-export default function Shirts() {
+export default function Shorts() {
   return (
     <>
       <Head>
@@ -21,14 +21,14 @@ export default function Shirts() {
       <style jsx>{`.items-container{
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));`}</style>
       <div className="grid gap-10 items-container p-10 w-full justify-center">
-        <ItemCard price={24.99} title="Sun Wars" link="/shirts.png" />
-        <ItemCard title="Sun Dial" price={19.99} link="/sunDial.png" />
-        <ItemCard title="The 2 Way" price={19.99} link="/2way.png" />
-        <ItemCard title="Baige" price={17.99} link="/plainBaige.png" />
-        <ItemCard title="Black" price={17.99} link="/plainBlack.png" />
-        <ItemCard title="Blue Flannel" price={34.99} link="/blueFlannel.png" />
-        <ItemCard title="Red Flannel" price={34.99} link="/redFlannel.png" />
-        <ItemCard title="Button Up" price={44.99} link="/buttonUp.png" />
+       <ItemCard title="Classic Comfort" link="/shorts.png" price={29.99} />
+       <ItemCard title="All Purpose Jeans" link="/jeans.png" price={39.99} />
+       <ItemCard title="Classic Comfort Gray" link="/grayShorts.png" price={29.99} />
+       <ItemCard title="Comfort Pants Green" link="/greenPants.png" price={39.99} />
+       <ItemCard title="Comfort Pants Blue" link="/bluePants.png" price={39.99} />
+       <ItemCard title="Bathing Suit set" link="/bathingSuitSet.png" price={44.99} />
+       <ItemCard title="Spandex" link="/spandex.png" price={14.99} />
+       <ItemCard title="Comfort Bathing Suit" link="/bathingSuit.png" price={24.99} />
       </div>
     </>
   );
