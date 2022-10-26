@@ -28,6 +28,9 @@ export default function Shirts() {
         <ItemCard title="Black" price={17.99} link="/plainBlack.png" />
         <ItemCard title="White Collar" price={29.99} link="/collar.png" />
         <ItemCard title="Black Collar" price={29.99} link="/blackCollar.png" />
+        <ItemCard title="Blue Flannel" price={34.99} link="/blueFlannel.png" />
+        <ItemCard title="Red Flannel" price={34.99} link="/redFlannel.png" />
+        <ItemCard title="Button Up" price={44.99} link="/buttonUp.png" />
       </div>
     </>
   );

@@ -30,8 +30,16 @@ export default function Shoes() {
         />
         <ItemCard title="All white" price={64.99} link="/allwhites.png" />
         <ItemCard title="Red Carpet" price={69.99} link="/redCarpet.png" />
-        <ItemCard title="All Black High Tops" price={74.99} link="/allBlackHigh.png" />
-        <ItemCard title="All Black Low Tops" price={64.99} link="/allBlackLow.png" />
+        <ItemCard
+          title="All Black High Tops"
+          price={74.99}
+          link="/allBlackHigh.png"
+        />
+        <ItemCard
+          title="All Black Low Tops"
+          price={64.99}
+          link="/allBlackLow.png"
+        />
         <ItemCard title="Badazzled" price={89.99} link="/badazzled.png" />
       </div>
     </>
